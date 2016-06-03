@@ -1,0 +1,163 @@
+/* @group GENERAL */
+* {box-sizing: border-box;}
+body {
+	font-family: 'Open Sans', sans-serif; 
+	background-color: #f9f9f9; 
+	text-align: center; 
+	margin: 0;
+	display: flex; 
+	flex-direction: column; 
+	min-height: 100vh;}
+ul {margin: 0; padding: 0; list-style: none}
+h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0;  text-align: center;}
+p {font-size: 1.5em; line-height: 1.8em; color: #666;}
+a, a:visited {text-decoration: none; color: #555;}
+a:hover {color: #000;}
+img {
+	max-width: 100%; 
+	width: 100%; 
+	height: 100%; 
+	border-radius: 5px; 
+	box-shadow: 0px 3px 5px #444;}
+/* @end GENERAL*/
+
+/* @group Base Styles*/
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;}
+.sezione {color: #444;}	
+.sezione h2{
+	font-size: 1.3em; 
+	padding: 30px 0 60px; 
+	text-transform: uppercase;
+}	
+/* @end Base Styles */
+
+/* @group HEADER*/
+.name {margin: 0; text-align: center; padding: 25px 0; color: #444;}
+h1.name {font-size: 2.5em;}
+.main-nav {margin-top: 5px;}
+.main-header, .container {
+	width: 100%;}
+/* @group NAVIGATION*/
+.name a, .main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;}
+.main-nav a {text-transform: uppercase;}	
+
+.main-header .name {margin: 0;}
+.main-header ul.main-nav {margin: 0; padding: 0; padding-top: 7px;}
+.main-header .main-nav li {text-transform: uppercase;}
+.main-header .main-nav li {
+	background: #fff;
+	margin: 7px 20px;
+	padding: 15px 5px;
+	background: #fff;	}
+.main-header ul.main-nav li a {
+	display: block;
+	font-weight: 700;
+	font-size: 1.3em;
+	text-align: center;
+	padding: .1em}
+.main-header .main-nav a:hover {color: #0b0b0b;}	
+/* @end NAVIGATION*/
+
+/* @end HEADER*/
+
+/* @group card */
+.card p {line-height: 1.5; color: #999;}
+.card img {max-width: 65%;}
+/* @end card*/
+
+/* @group MAIN */
+.main {background: #fff;}
+
+/* @group PORTFOLIO */
+.portfolio h3 { padding: 50px 0 10px; font-size: 1.7em; font-weight: 600;}
+.portfolio p {margin-bottom: 60px; font-size: 1.4em; line-height: 1.5;}	
+/* @end  PORTFOLIO*/
+
+/* @group SKILLS */
+.skills {background: #efe; padding: 30px; border-top: 3px solid #aba;}
+
+
+/* @end */
+
+/* @end  MAIN */
+
+/* @group FOOTER */
+.main {flex: 1;}
+footer {
+	padding: 1em 15%;
+	background: #fafafa;
+	padding: 1em;
+	padding-bottom: 120px;
+	width: 100%;}
+footer h2 {font-size: 1.3em; color: #555;
+	text-transform: uppercase; margin: 50px 0 35px;}
+footer p {font-size: 1.45em; font-weight: 300; line-height: 1.5; max-width: 550px; margin: 0 auto;}
+footer a {font-weight: 600;}	
+footer .contact-greeting {margin-bottom: 30px; line-height: 1.4;}
+footer .footer-end {
+	border-top: 1px solid #ccc;
+	margin-top: 80px;
+	padding-top: 20px;}		
+.footer-name {font-weight: 700;}	
+.back-to-top, footer ul {text-transform: uppercase; font-weight: 700;}
+footer p, .wide {padding-top: 0.5em;}
+.wide {display: none;}
+.back-to-top {display: inline-block;}
+.footer-name {float: left; padding-top: 5px;}
+.back-to-top, .wide {float: right; font-size: 1.2em;}
+.back-to-top a {font-weight: 700;}
+/* @end FOOTER */
+
+/* @group MEDIA QUERIES */
+	@media (min-width: 768px) {
+		.container {width: 90%; margin: 2em auto; padding: 0;}
+		
+		.main-header {width: 90%; margin: 0 auto}
+		.main-header, .main-nav {display: flex;}
+		.main-header {flex-direction: column; align-items: center;}	
+		.main-header .main-nav li {margin-left: .65em; margin-right: .65em; background: transparent;}
+				
+		.card {	  display: flex;
+				  flex-direction: row;
+				  flex-wrap: nowrap;
+				  justify-content: space-between;}
+		.card p { flex: 60%;
+				  order: -1;
+				  padding-right: 5%;
+				  text-align: left;}
+		.card img {flex: 40%;}
+				
+		.portfolio {display: flex; flex-wrap: wrap; justify-content: space-between;}
+		.skills p {
+			width: 90%;
+			margin: 0 auto;
+			padding-bottom:  20px; ;
+		}
+		.item {flex: 1 50%; padding: 10px;}
+			
+		.footer-name {padding: 0 0 0 .8em; margin: 0;}
+		.back-to-top {padding: 0 .8em 0 0; margin: 0;}
+		.wide {display: inline-block;}
+		.wide li {display: inline-block; padding: 0 .8em;}
+		.back-to-top {display: none;}
+		.footer-end {padding: 1.3em;}
+	}
+
+	@media (min-width: 1024px) {
+		.container {width: 80%;}
+		.main-header, .container {width: 80%; max-width: 1150px;}
+		.main-header {flex-direction: row; justify-content: space-between;}
+		.item {flex: 1 30%}
+		.sezione h3 {
+			padding: 30px 0 0;
+			font-size: 1.4em;
+			font-weight: 600;}
+		.sezione p { font-size: 1.2em; margin-bottom:  30px;}	
+	}
